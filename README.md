@@ -11,6 +11,7 @@ Resources
   - Key mappings for QWERTY and Colemak
   - Dimensions
   - Pierre's orders
+- [Idea progression](https://imgur.com/a/I05MD)
 
 Contributors
 ------------
