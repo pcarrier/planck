@@ -1,0 +1,17 @@
+Planck keyboard
+===============
+
+Resources
+---------
+- OpenSCAD preview in `shapes.scad`
+- [Spreadsheet](https://docs.google.com/spreadsheets/d/16PL8BpmRk11sDVm4-0jr7IXSfV37S0lgZxZrVKjS4J4/)
+  - Layout comparison with the HHKB
+  - Alt 4th line layouts
+  - Key mappings for QWERTY and Colemak
+  - Dimensions
+  - Pierre's orders
+
+Contributors
+------------
+- Jack Humbert
+- Pierre Carrier
