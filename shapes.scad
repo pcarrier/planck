@@ -39,7 +39,7 @@ square([233,81]);
 
 // Bottom plate, 16.5mm total height estimate (1.5 + 1.5 + 13.5)
 color([.5,.5,.5])
-translate([-233/2,-81/2,-1.8+5-15])
+translate([-233/2,-81/2,-1.6+5-15])
 linear_extrude(1.5)
 square([233,81]);
 
@@ -50,12 +50,12 @@ square([30.84, 17.76]);
 
 // Wood sandwich
 %difference() {
-  translate([-233/2,-81/2,-1.8+5-15+1.5])
+  translate([-233/2,-81/2,-1.6+5-15+1.5])
   scale([233,81,13.5])
   cube();
 
   // intentionally too tall
-  translate([-225/2,-73/2,-1.8+5-15+1.5-2.5])
+  translate([-225/2,-73/2,-1.6+5-15+1.5-2.5])
   scale([225,73,20])
   cube();
 }
