@@ -21,9 +21,9 @@ for(i = [0:3]) {
 }
 
 // PCB
-translate([-225/2,-73/2,-1.8])
+translate([-223/2,-71/2,-1.8])
 linear_extrude(1.8)
-square([225,73]);
+square([223,71]);
 
 // Top plate
 translate([-233/2,-81/2,-1.8+5])
