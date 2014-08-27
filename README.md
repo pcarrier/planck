@@ -1,6 +1,8 @@
 Planck keyboard
 ===============
 
+![keyboard layout](https://i.imgur.com/nLRrrzh.png)
+
 Resources
 ---------
 - OpenSCAD preview in [shapes.scad](shapes.scad)
