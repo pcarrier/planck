@@ -21,16 +21,26 @@ for(i = [0:3]) {
 }
 
 // PCB
-translate([-223/2,-71/2,-1.8])
-linear_extrude(1.8)
+translate([-223/2,-71/2,-1.6])
+linear_extrude(1.6)
 square([223,71]);
 
 // Top plate
-translate([-233/2,-81/2,-1.8+5])
+translate([-233/2,-81/2,-1.6+5])
 linear_extrude(1.5)
 square([233,81]);
 
 // Bottom plate, 16.5mm total height estimate
-translate([-233/2,-81/2,-1.8+5-15])
+translate([-233/2,-81/2,-1.6+5-15])
 linear_extrude(1.5)
+square([233,81]);
+
+// Teensy
+translate([122.1 + (-233/2), -(81/2) + 17.12 + 17.76, -1.6 - 1.6 - 1.6])
+linear_extrude(1.6)
+square([30.84, 17.76]);
+
+// Wood, w/e
+translate([-233/2,-81/2,-1.6+5-15 + 1.5])
+#linear_extrude(13.5)
 square([233,81]);
