@@ -5,11 +5,10 @@ Planck keyboard
 
 Resources
 ---------
-- OpenSCAD preview in [shapes.scad](shapes.scad)
-- Rendered in [render](render/)
-- [Spreadsheet](https://docs.google.com/spreadsheets/d/16PL8BpmRk11sDVm4-0jr7IXSfV37S0lgZxZrVKjS4J4/)
+- OpenSCAD preview in [shapes.scad](shapes.scad), rendered in [render](render/)
+- [Spreadsheet](https://docs.google.com/spreadsheets/d/16PL8BpmRk11sDVm4-0jr7IXSfV37S0lgZxZrVKjS4J4/) with multiple tabs, covering:
+  - Alternative 4th line layouts (available on PCB)
   - Layout comparison with the HHKB
-  - Alt 4th line layouts
   - Key mappings for QWERTY and Colemak
   - Dimensions
   - Pierre's orders
