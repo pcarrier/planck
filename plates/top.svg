@@ -2,9 +2,9 @@
   xmlns="http://www.w3.org/2000/svg" 
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <g id="margined" transform="translate(20 20)">
-    <g id="base" style="stroke-width:0.01;stroke:#00F;fill:#888">
+    <g id="base" style="stroke-width:0.01;stroke:#00F;fill:none">
       <g id="body">
-        <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5" style="fill:#ddd"/>
+        <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5"/>
       </g>
       <g id="screws">
         <circle cx="21.5" cy="21.5" r="1.5"/>
