@@ -1,7 +1,7 @@
 Planck keyboard
 ===============
 
-![keyboard layout](https://i.imgur.com/nLRrrzh.png)
+![keyboard layout](layout.png)
 
 Resources
 ---------
