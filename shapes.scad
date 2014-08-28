@@ -1,40 +1,53 @@
 // keys
-module m_switch() {
+module m_switch(w, h) {
   color([.2,.2,.2,.8])
-    scale([14,14,11.6])
-      cube();
+    translate([0, 0, 11.6/2])
+      scale([14,14,11.6])
+        cube(center=true);
 }
 
 module m_cap(w, h, r = 2) {
   color([.9,.9,.9,.8])
-    translate([w/2,h/2])
       linear_extrude(9,scale=.5/.75) {
         minkowski() {
           scale([w-2*r,h-2*r])
             square(center=true);
           circle(r, $fn=100);
-          }
+        }
       }
 }
 
 module m_key(w, h) {
-  translate([-4.415/2, -4.415/2, -1.8+5+7.5])
+  // z fn
+  translate([0, 0, -1.8+5+7.5])
     m_cap(w, h);
-  m_switch();
+    m_switch(w, h);
 }
 
-translate([-(6*19)+(5/2), -(2*19)+(5/2)])
-for(i = [0:3]) {
-  for(j = [0:11]) {
-    if (i == 0 && j == 5) {
-      translate([19*j, 19*i])
-        m_key(18.415*2 + .6, 18.415);
-    } else if (i != 0 || j != 6) {
-      translate([19*j,19*i])
-        m_key(18.415, 18.415);
-    }
+module m_row(count) {
+  for (i = [0:count]) {
+    translate([0, 19*i])
+      m_key(18.415, 18.415);
   }
 }
+
+for (x = [1:5]) {
+  translate([19*(-.5-x),19*(-.5-1),0])
+    m_row(3);
+}
+for (x = [2:6]) {
+  translate([19*(-.5+x),19*(-.5-1),0])
+    m_row(3);
+}
+translate([19*(-.5),19*(-.5),0])
+  m_row(2);
+translate([19*(-.5),19*(-.5),0])
+  m_row(2);
+translate([19*(-.5+1),19*(-.5),0])
+  m_row(2);
+
+translate([0,19*(-.5-1)])
+  m_key(2*18.415+.6,18.415);
 
 // PCB
 color([0,.5,0,.8])
