@@ -3,20 +3,28 @@ module m_switch() {
   color([.2,.2,.2]) scale([14,14,11.6]) cube();
 }
 
+module m_cap(w, h) {
+  color([1,0,0,.2])
+  translate([w/2,h/2])
+  linear_extrude(9,scale=.5/.75)
+  scale([w,h])
+  square(center=true);
+}
+
 translate([-(6*19)+(5/2), -(2*19)+(5/2)])
 for(i = [0:3]) {
   for(j = [0:11]) {
 	  if (i == 0 && j == 5) {
-         translate([19*(j + .5),19*i]) m_switch();
-
-	    #translate([-4.415/2,-4.415/2,-1.8+5+7.5])
-	    translate([19*j,19*i]) scale([18.415*2+.6,18.415,9]) cube();
+         translate([19*(j + .5),19*i])
+         m_switch();
+	    translate([19*j-4.415/2, 19*i-4.415/2,-1.8+5+7.5])
+         m_cap(18.415*2 + .6, 18.415);
       } else if (i == 0 && j == 6) {
       } else {
-         translate([19*j,19*i]) m_switch();
-
-	    #translate([-4.415/2,-4.415/2,-1.8+5+7.5])
-	    translate([19*j,19*i]) scale([18.415,18.415,9]) cube();
+         translate([19*j,19*i])
+         m_switch();
+	    translate([19*j-4.415/2,19*i-4.415/2,-1.8+5+7.5])
+         m_cap(18.415, 18.415);
       }
   }
 }
