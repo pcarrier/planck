@@ -5,12 +5,16 @@ module m_switch() {
       cube();
 }
 
-module m_cap(w, h) {
+module m_cap(w, h, r = 2) {
   color([.9,.9,.9,.8])
     translate([w/2,h/2])
-      linear_extrude(9,scale=.5/.75)
-        scale([w,h])
-          square(center=true);
+      linear_extrude(9,scale=.5/.75) {
+        minkowski() {
+          scale([w-2*r,h-2*r])
+            square(center=true);
+          circle(r, $fn=100);
+          }
+      }
 }
 
 module m_key(w, h) {
