@@ -4,7 +4,7 @@ module m_switch() {
 }
 
 module m_cap(w, h) {
-  color([1,0,0,.2])
+  color([1,1,1])
   translate([w/2,h/2])
   linear_extrude(9,scale=.5/.75)
   scale([w,h])
