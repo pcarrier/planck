@@ -13,19 +13,21 @@ module m_cap(w, h) {
           square(center=true);
 }
 
+module m_key(w, h) {
+  translate([-4.415/2, -4.415/2, -1.8+5+7.5])
+    m_cap(w, h);
+  m_switch();
+}
+
 translate([-(6*19)+(5/2), -(2*19)+(5/2)])
 for(i = [0:3]) {
   for(j = [0:11]) {
     if (i == 0 && j == 5) {
-      translate([19*(j + .5),19*i])
-        m_switch();
-      translate([19*j-4.415/2, 19*i-4.415/2,-1.8+5+7.5])
-        m_cap(18.415*2 + .6, 18.415);
+      translate([19*j, 19*i])
+        m_key(18.415*2 + .6, 18.415);
     } else if (i != 0 || j != 6) {
       translate([19*j,19*i])
-        m_switch();
-      translate([19*j-4.415/2,19*i-4.415/2,-1.8+5+7.5])
-        m_cap(18.415, 18.415);
+        m_key(18.415, 18.415);
     }
   }
 }
