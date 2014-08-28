@@ -1,10 +1,10 @@
 // keys
 module m_switch() {
-  color([.2,.2,.2]) scale([14,14,11.6]) cube();
+  color([.2,.2,.2,.8]) scale([14,14,11.6]) cube();
 }
 
 module m_cap(w, h) {
-  color([.9,.9,.9])
+  color([.9,.9,.9,.8])
   translate([w/2,h/2])
   linear_extrude(9,scale=.5/.75)
   scale([w,h])
@@ -30,19 +30,19 @@ for(i = [0:3]) {
 }
 
 // PCB
-color([0,.5,0])
+color([0,.5,0,.8])
 translate([-223/2,-71/2,-1.6])
 linear_extrude(1.6)
 square([223,71]);
 
 // Top plate
-color([.5,.5,.5])
+color([.5,.5,.5,.8])
 translate([-233/2,-81/2,-1.6+5])
 linear_extrude(1.5)
 square([233,81]);
 
 // Bottom plate, 15mm total height estimate (1.5 + 1.5 + 12)
-color([.5,.5,.5])
+color([.5,.5,.5,.8])
 translate([-233/2,-81/2,-1.6+5-13.5])
 linear_extrude(1.5)
 square([233,81]);
