@@ -1,17 +1,13 @@
-<svg width="384mm" height="384mm"
+<svg width="384mm" height="384mm" viewBox="0 0 384 384"
   xmlns="http://www.w3.org/2000/svg" 
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- fixed unit, 1mm -->
-  <svg width="1mm" height="1mm" overflow="visible" viewBox="0 0 1 1">
-    <g id="margined" transform="translate(20 20)">
-      <g id="base" style="stroke:#00F;fill:#888;stroke-width:0.01">
-        <!-- body -->
-        <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5" style="fill:#ddd"/>
-        <rect x="4" y="4" width="225" height="73" rx="1" ry="1"/>
-      </g>
-      <use xlink:href="#base" transform="translate(0, 106)"/>
-      <use xlink:href="#base" transform="translate(0, 212)"/>
-      <use xlink:href="#base" transform="translate(344, 0) rotate(90)"/>
+  <g id="margined" transform="translate(20 20)">
+    <g id="base" style="stroke-width:0.01;stroke:#00F;fill:#888">
+      <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5" style="fill:#ddd"/>
+      <rect x="4" y="4" width="225" height="73" rx="1" ry="1"/>
     </g>
-  </svg>
+    <use xlink:href="#base" transform="translate(0, 106)"/>
+    <use xlink:href="#base" transform="translate(0, 212)"/>
+    <use xlink:href="#base" transform="translate(344, 0) rotate(90)"/>
+  </g>
 </svg>

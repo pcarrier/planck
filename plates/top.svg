@@ -1,81 +1,80 @@
-<svg width="384mm" height="384mm"
+<svg width="384mm" height="384mm" viewBox="0 0 384 384"
   xmlns="http://www.w3.org/2000/svg" 
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- fixed unit, 1mm -->
-  <svg width="1mm" height="1mm" overflow="visible" viewBox="0 0 1 1">
-    <g id="margined" transform="translate(20 20)">
-      <g id="base" style="stroke:#00F;fill:#888;stroke-width:0.01">
-        <!-- body -->
+  <g id="margined" transform="translate(20 20)">
+    <g id="base" style="stroke-width:0.01;stroke:#00F;fill:#888">
+      <g id="body">
         <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5" style="fill:#ddd"/>
-        <g id="screws">
-          <circle cx="21.5" cy="21.5" r="1.5"/>
-          <circle cx="21.5" cy="59.5" r="1.5"/>
-          <circle cx="116.5" cy="40.5" r="1.5"/>
-          <circle cx="211.5" cy="21.5" r="1.5"/>
-          <circle cx="211.5" cy="59.5" r="1.5"/>
-        </g>
-        <g id="row0">
-          <rect x="5"   y="5"  width="14" height="14"/>
-          <rect x="24"  y="5"  width="14" height="14"/>
-          <rect x="43"  y="5"  width="14" height="14"/>
-          <rect x="62"  y="5"  width="14" height="14"/>
-          <rect x="81"  y="5"  width="14" height="14"/>
-          <rect x="100" y="5"  width="14" height="14"/>
-          <rect x="119" y="5"  width="14" height="14"/>
-          <rect x="138" y="5"  width="14" height="14"/>
-          <rect x="157" y="5"  width="14" height="14"/>
-          <rect x="176" y="5"  width="14" height="14"/>
-          <rect x="195" y="5"  width="14" height="14"/>
-          <rect x="214" y="5"  width="14" height="14"/>
-        </g>
-        <g id="row1">
-          <rect x="5"   y="24" width="14" height="14"/>
-          <rect x="24"  y="24" width="14" height="14"/>
-          <rect x="43"  y="24" width="14" height="14"/>
-          <rect x="62"  y="24" width="14" height="14"/>
-          <rect x="81"  y="24" width="14" height="14"/>
-          <rect x="100" y="24" width="14" height="14"/>
-          <rect x="119" y="24" width="14" height="14"/>
-          <rect x="138" y="24" width="14" height="14"/>
-          <rect x="157" y="24" width="14" height="14"/>
-          <rect x="176" y="24" width="14" height="14"/>
-          <rect x="195" y="24" width="14" height="14"/>
-          <rect x="214" y="24" width="14" height="14"/>
-        </g>
-        <g id="row2">
-          <rect x="5"   y="43" width="14" height="14"/>
-          <rect x="24"  y="43" width="14" height="14"/>
-          <rect x="43"  y="43" width="14" height="14"/>
-          <rect x="62"  y="43" width="14" height="14"/>
-          <rect x="81"  y="43" width="14" height="14"/>
-          <rect x="100" y="43" width="14" height="14"/>
-          <rect x="119" y="43" width="14" height="14"/>
-          <rect x="138" y="43" width="14" height="14"/>
-          <rect x="157" y="43" width="14" height="14"/>
-          <rect x="176" y="43" width="14" height="14"/>
-          <rect x="195" y="43" width="14" height="14"/>
-          <rect x="214" y="43" width="14" height="14"/>
-        </g>
-        <g id="row3">
-          <rect x="5"   y="62" width="14" height="14"/>
-          <rect x="24"  y="62" width="14" height="14"/>
-          <rect x="43"  y="62" width="14" height="14"/>
-          <rect x="62"  y="62" width="14" height="14"/>
-          <rect x="81"  y="62" width="14" height="14"/>
-          <rect x="138" y="62" width="14" height="14"/>
-          <rect x="157" y="62" width="14" height="14"/>
-          <rect x="176" y="62" width="14" height="14"/>
-          <rect x="195" y="62" width="14" height="14"/>
-          <rect x="214" y="62" width="14" height="14"/>
-          <!-- spacebar -->
+      </g>
+      <g id="screws">
+        <circle cx="21.5" cy="21.5" r="1.5"/>
+        <circle cx="21.5" cy="59.5" r="1.5"/>
+        <circle cx="116.5" cy="40.5" r="1.5"/>
+        <circle cx="211.5" cy="21.5" r="1.5"/>
+        <circle cx="211.5" cy="59.5" r="1.5"/>
+      </g>
+      <g id="row0">
+        <rect x="5"   y="5"  width="14" height="14"/>
+        <rect x="24"  y="5"  width="14" height="14"/>
+        <rect x="43"  y="5"  width="14" height="14"/>
+        <rect x="62"  y="5"  width="14" height="14"/>
+        <rect x="81"  y="5"  width="14" height="14"/>
+        <rect x="100" y="5"  width="14" height="14"/>
+        <rect x="119" y="5"  width="14" height="14"/>
+        <rect x="138" y="5"  width="14" height="14"/>
+        <rect x="157" y="5"  width="14" height="14"/>
+        <rect x="176" y="5"  width="14" height="14"/>
+        <rect x="195" y="5"  width="14" height="14"/>
+        <rect x="214" y="5"  width="14" height="14"/>
+      </g>
+      <g id="row1">
+        <rect x="5"   y="24" width="14" height="14"/>
+        <rect x="24"  y="24" width="14" height="14"/>
+        <rect x="43"  y="24" width="14" height="14"/>
+        <rect x="62"  y="24" width="14" height="14"/>
+        <rect x="81"  y="24" width="14" height="14"/>
+        <rect x="100" y="24" width="14" height="14"/>
+        <rect x="119" y="24" width="14" height="14"/>
+        <rect x="138" y="24" width="14" height="14"/>
+        <rect x="157" y="24" width="14" height="14"/>
+        <rect x="176" y="24" width="14" height="14"/>
+        <rect x="195" y="24" width="14" height="14"/>
+        <rect x="214" y="24" width="14" height="14"/>
+      </g>
+      <g id="row2">
+        <rect x="5"   y="43" width="14" height="14"/>
+        <rect x="24"  y="43" width="14" height="14"/>
+        <rect x="43"  y="43" width="14" height="14"/>
+        <rect x="62"  y="43" width="14" height="14"/>
+        <rect x="81"  y="43" width="14" height="14"/>
+        <rect x="100" y="43" width="14" height="14"/>
+        <rect x="119" y="43" width="14" height="14"/>
+        <rect x="138" y="43" width="14" height="14"/>
+        <rect x="157" y="43" width="14" height="14"/>
+        <rect x="176" y="43" width="14" height="14"/>
+        <rect x="195" y="43" width="14" height="14"/>
+        <rect x="214" y="43" width="14" height="14"/>
+      </g>
+      <g id="row3">
+        <rect x="5"   y="62" width="14" height="14"/>
+        <rect x="24"  y="62" width="14" height="14"/>
+        <rect x="43"  y="62" width="14" height="14"/>
+        <rect x="62"  y="62" width="14" height="14"/>
+        <rect x="81"  y="62" width="14" height="14"/>
+        <rect x="138" y="62" width="14" height="14"/>
+        <rect x="157" y="62" width="14" height="14"/>
+        <rect x="176" y="62" width="14" height="14"/>
+        <rect x="195" y="62" width="14" height="14"/>
+        <rect x="214" y="62" width="14" height="14"/>
+        <g id="spacebar">
           <rect x="109.5" y="62" width="14" height="14"/>
           <rect x="103.037" y="62.775" width="3.05" height="13.46"/>
           <rect x="126.913" y="62.775" width="3.05" height="13.46"/>
         </g>
       </g>
-      <use xlink:href="#base" transform="translate(0, 106)"/>
-      <use xlink:href="#base" transform="translate(0, 212)"/>
-      <use xlink:href="#base" transform="translate(344, 0) rotate(90)"/>
     </g>
-  </svg>
+    <use xlink:href="#base" transform="translate(0, 106)"/>
+    <use xlink:href="#base" transform="translate(0, 212)"/>
+    <use xlink:href="#base" transform="translate(344, 0) rotate(90)"/>
+  </g>
 </svg>
