@@ -1,26 +1,22 @@
 // keys
+module m_switch() {
+  color([.2,.2,.2]) scale([14,14,11.6]) cube();
+}
+
 translate([-(6*19)+(5/2), -(2*19)+(5/2)])
 for(i = [0:3]) {
   for(j = [0:11]) {
 	  if (i == 0 && j == 5) {
-         // switch
-         color([.2,.2,.2])
-	    linear_extrude(11.6)
-         translate([19*(j + .5),19*i]) square([14,14]);
-         // cap
-	    translate([-4.415/2,-4.415/2,-1.8+5+7.5])
-	    #linear_extrude(9)
-	    translate([19*j,19*i]) square([18.415*2 + .6,18.415]);
+         translate([19*(j + .5),19*i]) m_switch();
+
+	    #translate([-4.415/2,-4.415/2,-1.8+5+7.5])
+	    translate([19*j,19*i]) scale([18.415*2+.6,18.415,9]) cube();
       } else if (i == 0 && j == 6) {
       } else {
-         // switch
-         color([.2,.2,.2])
-	    linear_extrude(11.6)
-         translate([19*j,19*i]) square([14,14]);
-	    // cap
-	    translate([-4.415/2,-4.415/2,-1.8+5+7.5])
-	    #linear_extrude(9)
-	    translate([19*j,19*i]) square([18.415,18.415]);
+         translate([19*j,19*i]) m_switch();
+
+	    #translate([-4.415/2,-4.415/2,-1.8+5+7.5])
+	    translate([19*j,19*i]) scale([18.415,18.415,9]) cube();
       }
   }
 }
