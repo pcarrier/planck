@@ -148,6 +148,10 @@
       <!-- <use xlink:href="#screws"/> -->
       <use xlink:href="#lplateholes"/>
     </g>
+    <g id="middle">
+      <use xlink:href="#body"/>
+      <rect x="4" y="4" width="225" height="73" rx="1" ry="1"/>
+    </g>
     <g id="bottom">
       <use xlink:href="#body"/>
       <!-- <use xlink:href="#screws"/> -->
@@ -181,11 +185,5 @@
   </defs>
 
   <use xlink:href="#top1" transform="translate(10,10)"/>
-  <use xlink:href="#top2" transform="translate(10,101)"/>
-  <use xlink:href="#top2" transform="translate(10,192)"/>
-  <!-- <use xlink:href="#bottom" transform="translate(325,5) rotate(90)"/> -->
-  <!-- Not cornered!
-    <use xlink:href="#10mid" transform="translate(41,265)"/>
-    <use xlink:href="#8mid" transform="translate(262,373) rotate(180)"/>
-  -->
+  <use xlink:href="#bottom" transform="translate(10,101)"/>
 </svg>
