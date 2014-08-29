@@ -184,8 +184,7 @@
     </g>
   </defs>
 
-  <!-- enough room for https://www.sparkfun.com/products/12035 -->
-  <rect x="6" y="20" width="12" height="21"/>
+  <rect x="6" y="20" width="12" height="4"/>
 
   <use xlink:href="#middle" transform="translate(10, 10)"/>
   <use xlink:href="#middle" transform="translate(10, 101)"/>
