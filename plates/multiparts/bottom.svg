@@ -4,14 +4,14 @@
   <g id="margined" transform="translate(20 20)">
     <g id="base" style="stroke-width:0.01;stroke:#00F;fill:none">
       <g id="body">
-        <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5"/>
+        <rect x="0" y="0" width="233" height="81"/>
       </g>
       <g id="screws">
-        <circle cx="21.5" cy="21.5" r="1.5"/>
-        <circle cx="21.5" cy="59.5" r="1.5"/>
-        <circle cx="116.5" cy="40.5" r="1.5"/>
-        <circle cx="211.5" cy="21.5" r="1.5"/>
-        <circle cx="211.5" cy="59.5" r="1.5"/>
+        <rect x="20"  cy="20" width="3" height="3"/>
+        <rect x="20"  cy="58" width="3" height="3"/>
+        <rect x="115" cy="39" width="3" height="3"/>
+        <rect x="210" cy="20" width="3" height="3"/>
+        <rect x="210" cy="58" width="3" height="3"/>
       </g>
     </g>
     <use xlink:href="#base" transform="translate(0, 106)"/>
