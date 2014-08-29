@@ -1,0 +1,22 @@
+<svg
+  width="384mm"
+  height="384mm"
+  viewBox="0 0 384 384"
+  style="stroke-width:0.01;stroke:#00F;fill:none"
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <g id="outer">
+      <rect x="0" y="0" width="233" height="81" rx="3" ry="3"/>
+    </g>
+    <g id="middle">
+      <use xlink:href="#outer"/>
+      <rect x="4" y="4" width="225" height="73" rx="1" ry="1"/>
+    </g>
+  </defs>
+  <use xlink:href="#middle" transform="translate(10, 10)"/>
+  <use xlink:href="#middle" transform="translate(10, 101)"/>
+  <use xlink:href="#middle" transform="translate(10, 192)"/>
+  <use xlink:href="#middle" transform="translate(10, 283)"/>
+  <use xlink:href="#outer" transform="translate(334, 10) rotate(90)"/>
+</svg>

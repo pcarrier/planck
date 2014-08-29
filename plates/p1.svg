@@ -7,15 +7,15 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <g id="body">
-      <rect x="0" y="0" width="233" height="81" rx="1.5" ry="1.5"/>
+      <rect x="0" y="0" width="233" height="81" rx="3" ry="3"/>
     </g>
-    <g id="screws">
+    <!-- <g id="screws">
       <circle cx="21.5"  cy="21.5" r="1"/>
       <circle cx="21.5"  cy="59.5" r="1"/>
       <circle cx="211.5" cy="21.5" r="1"/>
       <circle cx="211.5" cy="59.5" r="1"/>
       <circle cx="116.5" cy="40.5" r="1"/>
-    </g>
+    </g> -->
     <g id="plateholes">
       <g id="row0">
         <rect x="5"   y="5"  width="14" height="14"/>
@@ -140,42 +140,52 @@
     </g>
     <g id="top1">
       <use xlink:href="#body"/>
-      <use xlink:href="#screws"/>
+      <!-- <use xlink:href="#screws"/> -->
       <use xlink:href="#plateholes"/>
     </g>
     <g id="top2">
       <use xlink:href="#body"/>
-      <use xlink:href="#screws"/>
+      <!-- <use xlink:href="#screws"/> -->
       <use xlink:href="#lplateholes"/>
     </g>
     <g id="bottom">
       <use xlink:href="#body"/>
-      <use xlink:href="#screws"/>
+      <!-- <use xlink:href="#screws"/> -->
     </g>
     <g id="mid">
-      <polygon points="225,0 229,0 229,77 0,77 0,73 225,73"/>
+      <polyline points="225,0 229,0 229,77 0,77 0,73"/>
+    </g>
+    <g id="8midp">
+      <use xlink:href="#mid"/>
+      <use xlink:href="#mid" transform="translate(4,4)"/>
+      <use xlink:href="#mid" transform="translate(8,8)"/>
+      <use xlink:href="#mid" transform="translate(12,12)"/>
+      <use xlink:href="#mid" transform="translate(16,16)"/>
+      <use xlink:href="#mid" transform="translate(20,20)"/>
+      <use xlink:href="#mid" transform="translate(24,24)"/>
+      <use xlink:href="#mid" transform="translate(28,28)"/>
+    </g>
+    <g id="midclose">
+      <polyline points="0,73 225,73, 225,0" />
     </g>
     <g id="8mid">
-      <use xlink:href="#mid"/>
-      <use xlink:href="#mid" transform="translate(5,5)"/>
-      <use xlink:href="#mid" transform="translate(10,10)"/>
-      <use xlink:href="#mid" transform="translate(15,15)"/>
-      <use xlink:href="#mid" transform="translate(20,20)"/>
-      <use xlink:href="#mid" transform="translate(25,25)"/>
-      <use xlink:href="#mid" transform="translate(30,30)"/>
-      <use xlink:href="#mid" transform="translate(35,35)"/>
+      <use xlink:href="#midclose"/>
+      <use xlink:href="#8midp"/>
     </g>
     <g id="10mid">
-      <use xlink:href="#8mid"/>
-      <use xlink:href="#mid" transform="translate(40,40)"/>
-      <use xlink:href="#mid" transform="translate(45,45)"/>
+      <use xlink:href="#midclose"/>
+      <use xlink:href="#8midp"/>
+      <use xlink:href="#mid" transform="translate(32,32)"/>
+      <use xlink:href="#mid" transform="translate(36,36)"/>
     </g>
   </defs>
 
-  <use xlink:href="#top1" transform="translate(5,5)"/>
-  <use xlink:href="#top2" transform="translate(5,90)"/>
-  <use xlink:href="#top2" transform="translate(5,175)"/>
-  <use xlink:href="#bottom" transform="translate(325,5) rotate(90)"/>
-  <use xlink:href="#10mid" transform="translate(95,250)"/>
-  <use xlink:href="#8mid" transform="translate(300,375) rotate(180)"/>
+  <use xlink:href="#top1" transform="translate(10,10)"/>
+  <use xlink:href="#top2" transform="translate(10,101)"/>
+  <use xlink:href="#top2" transform="translate(10,192)"/>
+  <!-- <use xlink:href="#bottom" transform="translate(325,5) rotate(90)"/> -->
+  <!-- Not cornered!
+    <use xlink:href="#10mid" transform="translate(41,265)"/>
+    <use xlink:href="#8mid" transform="translate(262,373) rotate(180)"/>
+  -->
 </svg>
