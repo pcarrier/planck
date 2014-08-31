@@ -85,7 +85,7 @@ translate([0,-11])
 
 
 module teensy() {
-  translate([0, -15, -1.5])
+  translate([0, -15, 1.5])
     scale([17.76, 30.84, 1.6])
       square(center = true);
 }

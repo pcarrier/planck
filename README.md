@@ -2,7 +2,7 @@
 
 ## Mappings
 
-### Pierre's
+### "Classic"
 
 [![keyboard layout](layout-pcarrier.png)](http://www.keyboard-layout-editor.com/#/layouts/46aa7b0762cb7a535eaaf1e49644398f)
 
@@ -10,6 +10,10 @@
 ### Jack's
 
 [![keyboard layout](layout-jack.png)](http://www.keyboard-layout-editor.com/#/layouts/313d2d43c1b86c7d223aa7ced2a67102)
+
+### "Ergolemak"
+
+[![keyboard layout](layout-ergolemak.png)](http://www.keyboard-layout-editor.com/#/layouts/6404f1346108887c37f781da0dc0e6c7)
 
 ## 3D previews
 
