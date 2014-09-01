@@ -32,15 +32,15 @@
 #define LED_OFF		(PORTD |= (1<<6))
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
-uint8_t number_keys[10]=
-	{KEY_0,KEY_1,KEY_2,KEY_3,KEY_4,KEY_5,KEY_6,KEY_7,KEY_8,KEY_9};
+uint8_t number_keys[10] =
+    { KEY_0, KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9 };
 
-uint16_t idle_count=0;
+uint16_t idle_count = 0;
 
 int main(void)
 {
 	uint8_t b, d, mask, i, reset_idle;
-	uint8_t b_prev=0xFF, d_prev=0xFF;
+	uint8_t b_prev = 0xFF, d_prev = 0xFF;
 
 	// set for 16 MHz clock
 	CPU_PRESCALE(0);
@@ -57,7 +57,8 @@ int main(void)
 	// If the Teensy is powered without a PC connected to the USB port,
 	// this will wait forever.
 	usb_init();
-	while (!usb_configured()) /* wait */ ;
+	while (!usb_configured())	/* wait */
+		;
 
 	// Wait an extra second for the PC's operating system to load drivers
 	// and do whatever it does to actually be ready for input
@@ -69,7 +70,7 @@ int main(void)
 	// inactivity timeout.
 	TCCR0A = 0x00;
 	TCCR0B = 0x05;
-	TIMSK0 = (1<<TOIE0);
+	TIMSK0 = (1 << TOIE0);
 
 	while (1) {
 		// read all port B and port D pins
@@ -78,7 +79,7 @@ int main(void)
 		// check if any pins are low, but were high previously
 		mask = 1;
 		reset_idle = 0;
-		for (i=0; i<8; i++) {
+		for (i = 0; i < 8; i++) {
 			if (((b & mask) == 0) && (b_prev & mask) != 0) {
 				usb_keyboard_press(KEY_B, KEY_SHIFT);
 				usb_keyboard_press(number_keys[i], 0);
@@ -120,5 +121,3 @@ ISR(TIMER0_OVF_vect)
 		usb_keyboard_press(KEY_SPACE, 0);
 	}
 }
-
-
