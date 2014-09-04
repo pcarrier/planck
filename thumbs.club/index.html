@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8"/>
     <title>Designed for opposable thumbs.</title>
-    <link href='//fonts.googleapis.com/css?family=Exo+2:100,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Exo+2:100,400,600' rel='stylesheet' type='text/css'>
     <style type="text/css">
-      body { color: #000; background-color: #fff; font-family: "Exo 2"; font-size: 12pt; font-weight: 100; }
+      body { color: #000; background-color: #fff; font-family: "Exo 2"; font-size: 12pt; font-weight: 400; }
       * { text-align: center; }
       html, body, div { margin: 0; padding: 0; }
-      h1 { font-size: 4em; font-weight: 500; margin: 1em 0 1em 0; padding: 0; }
-      a, a:active, a:visited, a:hover { font-weight: 500; text-decoration: none; color: #00c; }
+      h1 { font-size: 4em; font-weight: 400; margin: 1em 0 1em 0; padding: 0; }
+      a, a:active, a:visited, a:hover { font-weight: 400; text-decoration: none; color: #00c; }
       .kb {
         margin: 0 auto; cursor: default;
         -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;
         -o-user-select: none; user-select: none;
+        font-weight: 100; color: #888;
       }
+      .kb .hl, .kb .always { font-weight: 600; color: #000; }
       .kb td {
         position: relative;
         height: 5em; width: 5em;
@@ -26,7 +28,8 @@
       }
       .kb td.space { width: 10.1em; }
       .kb td.special, .kb td.meta, .kb td.arrow, .kb td.space { background-color: #ccc; }
-      .kb td.fn { background-color: #f80; cursor: pointer; }
+      .kb td.fn    { background-color: #f80; cursor: pointer; }
+      .kb td.fn.hl { background-color: #ff0; }
       .kb .l0, .kb .always { font-size: 18pt; }
       .kb .l1, .kb .l2 { position: absolute; font-size: 14pt; }
       .kb .l1 { bottom: .2em; right: .2em; }
@@ -72,7 +75,7 @@
         <td><div class="l0 kr"></div><div class="l1">~</div><div class="l2">Paste</div></td>
         <td><div class="l0 kr"></div><div class="l2">Del</div></td>
         <td class="special"><div class="always">BS</div></td>
-        <td class="special"><div class="always">Enter</div></td>
+        <td class="special"><div class="always">Ret</div></td>
         <td><div class="l0 kr"></div><div class="l2">Caps Lk</div></td>
         <td><div class="l0 kr"></div><div class="l1">[</div><div class="l2">Ins</div></td>
         <td><div class="l0 kr"></div><div class="l1">]</div><div class="l2">Pt Scr</div></td>
@@ -93,7 +96,9 @@
         <td class="arrow"><div class="l0">Right</div><div class="l1">End</div><div class="l2">P/P</div></td>
       </tr>
     </table>
-    <p class="layouts"><em>Try the orange keys.</em> Available in
+    <p class="layouts"><em>Try the orange keys.</em>
+    Shortcut: your left and right arrow keys.
+    Also available in
       <a href="#qwerty" id="qwerty">QWERTY</a>,
       <a href="#dvorak" id="dvorak">Dvorak</a>,
       <a href="#colemak" id="colemak">Colemak</a>.
@@ -102,8 +107,9 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
-      (function() {
-        var kr = $('.kr'), l0 = $('.l0'), l1 = $('.l1'), l2 = $('.l2'),
+      $(document).ready(function() {
+        var kr = $('.kr'), gl1 = $('.gl1'), gl2 = $('.gl2'),
+            l0 = $('.l0'), l1 = $('.l1'), l2 = $('.l2'),
             layouts = {
               'qwerty': [
                   'Q','W','E','R','T','\' "','\\ |','Y','U','I','O','P',
@@ -125,28 +131,35 @@
               var kb = layouts[l] || layouts.colemak;
               kr.text(function(i) { return kb[i]; });
             },
-            clr = function(tgt) { tgt.css({'font-weight': 100, 'color': '#888'}); },
-            hl  = function(tgt) { tgt.css({'font-weight': 500, 'color': '#000'}); };
+            clr = function(tgt) { tgt.removeClass('hl'); },
+            hl  = function(tgt) { tgt.addClass('hl'); },
+            sl  = function(l) {
+              if (l == 0) {
+                clr(l1.add(l2).add(gl1).add(gl2)); hl(l0);
+              } else if (l == 1) {
+                clr(l0.add(l2).add(gl2)); hl(l1.add(gl1));
+              } else if (l == 2) {
+                clr(l0.add(l1).add(gl1)); hl(l2.add(gl2));
+              }
+            };
 
-        // Init
-        hl(l0.add('.always'));
-        clr(l1.add(l2));
-
-        // Event handling
         Object.keys(layouts).map(function(k) {
           $('#'+k).click(function(){lk(k);});
         });
         lk(window.location.hash.substring(1));
+        sl(0);
 
-        $('.gl1').hover(
-          function(e) { clr(l0.add(l2)); hl(l1); },
-          function(e) { clr(l1.add(l2)); hl(l0); }
-        );
-        $('.gl2').hover(
-          function(e) { clr(l0.add(l1)); hl(l2); },
-          function(e) { clr(l1.add(l2)); hl(l0); }
-        );
-      }());
+        gl1.hover(function(e) {sl(1);}, function(e) {sl(0);});
+        gl2.hover(function(e) {sl(2);}, function(e) {sl(0);});
+
+        $(document).keydown(function(e) {
+          if (e.which == 37) sl(1);
+          else if (e.which == 39) sl(2);
+        });
+        $(document).keyup(function(e) {
+          if (e.which == 37 || e.which == 39) sl(0);
+        });
+      });
     </script>
   </body>
 </html>
