@@ -134,7 +134,7 @@
       </tr>
     </table>
     <p class="layouts"><em>Hover over the orange keys, or press left/right on your keyboard.</em>
-    Also available in
+    Available in
       <a href="#qwerty" id="qwerty">QWERTY</a>,
       <a href="#dvorak" id="dvorak">Dvorak</a>,
       <a href="#colemak" id="colemak">Colemak</a>.
@@ -164,7 +164,7 @@
               ]
             },
             lk = function(l) {
-              var kb = layouts[l] || layouts.colemak;
+              var kb = layouts[l] || layouts.qwerty;
               kr.text(function(i) { return kb[i]; });
             },
             clr = function(tgt) { tgt.removeClass('hl'); },
