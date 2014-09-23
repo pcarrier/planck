@@ -43,7 +43,6 @@
       html, body, div { margin: 0; padding: 0; }
       h1 { font-size: 400%; font-weight: normal; margin: .5em 0 .2em 0; padding: 0; }
       a, a:active, a:visited, a:hover { font-weight: normal; text-decoration: none; color: #00c; }
-      .links { font-size: 80%; }
 
       .kb {
         margin: 0 auto; cursor: default;
@@ -71,11 +70,12 @@
       .kb td.fn { background-color: #f80; cursor: pointer; }
       .kb td.fn.hl { background-color: #ff0; }
       .kb .l0, .kb .always { font-size: 20pt; }
-      .kb .l1, .kb .l2 { font-size: 12pt; }
+      .kb .l1, .kb .l2 { font-size: 14pt; }
       .kb .l0 { text-align: center; }
       .kb .l1, .kb .l2 { position: absolute; }
       .kb .l1 { bottom: .2em; right: .2em; }
       .kb .l2 { top: .2em; left: .2em; }
+      .dsq { margin: 2em; }
     </style>
   </head>
   <body>
@@ -143,7 +143,8 @@
       <a href="#dvorak" id="dvorak">Dvorak</a>,
       <a href="#colemak" id="colemak">Colemak</a>.
     </p>
-    <p class="links"><a href="mailto:pierre@gcarrier.fr">Contact</a>, <a href="https://github.com/pcarrier/planck">Github</a></p>
+
+    <div class="dsq"><div id="disqus_thread"></div></div>
 
     <script src="jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
@@ -201,5 +202,6 @@
         });
       });
     </script>
+    <script async="true" src="//thumbsclub.disqus.com/embed.js"></script>
   </body>
 </html>
