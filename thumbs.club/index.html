@@ -139,9 +139,9 @@
     </table>
     <p class="layouts"><em>Hover over the orange keys, or press left/right on your keyboard.</em>
     Available in
-      <a href="#qwerty" id="qwerty">QWERTY</a>,
-      <a href="#dvorak" id="dvorak">Dvorak</a>,
-      <a href="#colemak" id="colemak">Colemak</a>.
+      <a href="#qwerty"  id="b_qwerty">QWERTY</a>,
+      <a href="#dvorak"  id="b_dvorak">Dvorak</a>,
+      <a href="#colemak" id="b_colemak">Colemak</a>.
     </p>
 
     <div class="dsq"><div id="disqus_thread"></div></div>
@@ -185,9 +185,9 @@
             };
 
         Object.keys(layouts).map(function(k) {
-          $('#'+k).click(function(){lk(k);});
+          $('#b_'+k).click(function(){location.hash = k; lk(k);});
         });
-        lk(window.location.hash.substring(1));
+        lk(location.hash.substring(1));
         sl(0);
 
         gl1.hover(function(e) {sl(1);}, function(e) {sl(0);});
